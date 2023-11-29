@@ -5,6 +5,51 @@
   (paper "A4")
 
   (lib_symbols
+    (symbol "Herranz - Capacitor (0402):Gen_C" (pin_numbers hide) (pin_names (offset 0) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "C" (at 4 -7 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "Gen_C" (at 6 -5 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 0 3 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Voltage" "Voltage" (at 7 -9 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (symbol "Gen_C_0_1"
+        (polyline
+          (pts
+            (xy -2 -6.75)
+            (xy 2.064 -6.75)
+          )
+          (stroke (width 0.508) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -2 -5.25)
+            (xy 2.064 -5.25)
+          )
+          (stroke (width 0.508) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "Gen_C_1_1"
+        (pin passive line (at 0 -2 270) (length 3)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 0 -10 90) (length 3)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "Herranz - Capacitor (0603):Gen_C" (pin_numbers hide) (pin_names (offset 0) hide) (in_bom yes) (on_board yes)
       (property "Reference" "C" (at 4 -7 0)
         (effects (font (size 1.27 1.27)))
@@ -460,9 +505,6 @@
   (junction (at 167 135) (diameter 0) (color 0 0 0 0)
     (uuid 0924552e-fb52-4e72-940a-8abc97d6c062)
   )
-  (junction (at 126 61) (diameter 0) (color 0 0 0 0)
-    (uuid 0cc98b4d-e00a-4d9d-9cfb-0eb83c1448c1)
-  )
   (junction (at 258 104) (diameter 0) (color 0 0 0 0)
     (uuid 0ffcbddd-ec18-430b-83ba-9c421f3dd8d5)
   )
@@ -472,11 +514,17 @@
   (junction (at 95 87) (diameter 0) (color 0 0 0 0)
     (uuid 25650fa5-fe93-43a0-a747-5ae73ac8b710)
   )
+  (junction (at 102 59) (diameter 0) (color 0 0 0 0)
+    (uuid 2e082fe2-cbf1-47de-880c-bb5b29331d86)
+  )
   (junction (at 107 87) (diameter 0) (color 0 0 0 0)
     (uuid 2eeeea5d-e332-4143-84e1-541d6121ef10)
   )
   (junction (at 113 135) (diameter 0) (color 0 0 0 0)
     (uuid 4e1d2248-5da4-4406-8c6d-ae1935a17215)
+  )
+  (junction (at 112 59) (diameter 0) (color 0 0 0 0)
+    (uuid a88ff076-6564-4bd7-84eb-767429617dcf)
   )
   (junction (at 95 124) (diameter 0) (color 0 0 0 0)
     (uuid b34d4718-8573-4de4-9182-cc32a84f17e2)
@@ -493,15 +541,20 @@
   (junction (at 45 89) (diameter 0) (color 0 0 0 0)
     (uuid df8fb240-8c7d-4e7a-a7dd-d8ac0066704f)
   )
-  (junction (at 123 61) (diameter 0) (color 0 0 0 0)
-    (uuid f96de313-717d-4bf1-b302-e3047482c78c)
-  )
 
   (polyline (pts (xy 34 59) (xy 61 59))
     (stroke (width 0) (type default))
     (uuid 00e9c101-d0b4-416e-9721-d07a5198bba8)
   )
 
+  (wire (pts (xy 102 61) (xy 102 59))
+    (stroke (width 0) (type default))
+    (uuid 0839ae75-b476-4643-8723-e9095cc94548)
+  )
+  (wire (pts (xy 102 57) (xy 102 59))
+    (stroke (width 0) (type default))
+    (uuid 08c6896d-cedb-4309-9440-b510a9c3bfbf)
+  )
   (wire (pts (xy 202 107) (xy 219 107))
     (stroke (width 0) (type default))
     (uuid 08f4ed52-c103-43c9-8e29-9ae56164c57c)
@@ -539,10 +592,6 @@
     (stroke (width 0) (type default))
     (uuid 1643863b-f5c2-42bb-824a-f98e68902693)
   )
-  (wire (pts (xy 123 61) (xy 123 84))
-    (stroke (width 0) (type default))
-    (uuid 17ef424c-adf8-459e-8f5d-f425f8920a46)
-  )
   (wire (pts (xy 167 132) (xy 167 135))
     (stroke (width 0) (type default))
     (uuid 1ccb0056-2113-40d4-b6a3-d0785d49aa4e)
@@ -559,6 +608,10 @@
   (wire (pts (xy 257 110) (xy 261 110))
     (stroke (width 0) (type default))
     (uuid 260373e8-3523-4782-b417-af7f2dc612e4)
+  )
+  (wire (pts (xy 102 59) (xy 112 59))
+    (stroke (width 0) (type default))
+    (uuid 264e7c7a-8055-4972-a6e0-0879b1c23010)
   )
   (wire (pts (xy 163 122) (xy 173 122))
     (stroke (width 0) (type default))
@@ -603,10 +656,6 @@
   (wire (pts (xy 45 89) (xy 50 89))
     (stroke (width 0) (type default))
     (uuid 4a4ae70a-6107-40c1-b93a-c8182e9b21a5)
-  )
-  (wire (pts (xy 123 55) (xy 123 61))
-    (stroke (width 0) (type default))
-    (uuid 4a53e552-9f61-4983-b9b6-2d4c36986eaf)
   )
   (wire (pts (xy 166 130) (xy 173 130))
     (stroke (width 0) (type default))
@@ -660,6 +709,10 @@
     (stroke (width 0) (type default))
     (uuid 754e4bfc-4ef5-4059-afcd-52d51bd35efc)
   )
+  (wire (pts (xy 123 84) (xy 123 59))
+    (stroke (width 0) (type default))
+    (uuid 797eb132-ee62-4ff3-a16d-2da89ded4554)
+  )
   (wire (pts (xy 163 132) (xy 167 132))
     (stroke (width 0) (type default))
     (uuid 7d34cef5-f09e-4423-9e87-2724c7568ba3)
@@ -700,9 +753,13 @@
     (stroke (width 0) (type default))
     (uuid 9a1140eb-4144-4473-9af8-b73ed7628635)
   )
-  (wire (pts (xy 126 61) (xy 138 61))
+  (wire (pts (xy 102 46) (xy 102 47))
     (stroke (width 0) (type default))
-    (uuid 9c73ce05-3b58-4fca-bb8c-d1325cd3051c)
+    (uuid 9c8efbbe-4a37-43bd-a376-38ce2ae684a7)
+  )
+  (wire (pts (xy 112 71) (xy 112 70))
+    (stroke (width 0) (type default))
+    (uuid 9ec75905-8e4c-4fe0-a6d5-1bdf60dcc6ea)
   )
   (wire (pts (xy 219 98) (xy 213 98))
     (stroke (width 0) (type default))
@@ -728,10 +785,6 @@
     (stroke (width 0) (type default))
     (uuid c5b847cf-5aef-4088-8516-4beb5c3614ad)
   )
-  (wire (pts (xy 123 61) (xy 126 61))
-    (stroke (width 0) (type default))
-    (uuid c7fc1c29-645b-4898-94c8-8518f1a7117d)
-  )
   (wire (pts (xy 258 107) (xy 258 104))
     (stroke (width 0) (type default))
     (uuid cf315e5d-6229-4378-918f-8ada950211c8)
@@ -743,6 +796,10 @@
   (wire (pts (xy 163 86) (xy 182 86))
     (stroke (width 0) (type default))
     (uuid e0e4e77e-8be3-49cd-8189-1ceaf7410ded)
+  )
+  (wire (pts (xy 123 59) (xy 112 59))
+    (stroke (width 0) (type default))
+    (uuid e0e776d9-2171-4f55-987f-689737009389)
   )
   (wire (pts (xy 45 86) (xy 45 89))
     (stroke (width 0) (type default))
@@ -771,6 +828,10 @@
   (wire (pts (xy 95 78) (xy 95 87))
     (stroke (width 0) (type default))
     (uuid fa073219-568d-49db-a4c6-c24f3917b156)
+  )
+  (wire (pts (xy 112 62) (xy 112 59))
+    (stroke (width 0) (type default))
+    (uuid fcf7c60e-f756-4066-91d8-dade809c0672)
   )
 
   (text "Mode Selection" (at 36 64 0)
@@ -846,7 +907,7 @@
   (symbol (lib_id "power:Vdrive") (at 264 92 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 03b8e0a4-8e06-4acf-92c1-821890a76861)
-    (property "Reference" "#PWR0103" (at 258.92 95.81 0)
+    (property "Reference" "#PWR?" (at 258.92 95.81 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "Vdrive" (at 264 86.64 0)
@@ -862,21 +923,50 @@
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "#PWR0103") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "#PWR037") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "#PWR055") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
         (path "/a9814894-6caf-47c3-94af-538221f5e47e"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR0104") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Herranz - Resistors (0402):0") (at 101 52 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 05adcc64-da88-4c54-8ca4-24c8c8a1a2bc)
+    (property "Reference" "R6" (at 104.14 49.46 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "0" (at 104.14 52 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 98 52 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 101 52 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Size" "0402" (at 104.14 54.54 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (pin "2" (uuid e0bc9abd-35c3-4eac-b982-053a9eb274bd))
+    (pin "1" (uuid 930dae0a-4222-4ddf-86b9-3712d4427f0a))
+    (instances
+      (project "DRV8874_breakout_board"
+        (path "/a9814894-6caf-47c3-94af-538221f5e47e"
+          (reference "R6") (unit 1)
         )
       )
     )
@@ -885,7 +975,7 @@
   (symbol (lib_id "Herranz - Resistors (0402):10K") (at 79 104 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 061949ac-ebe1-4ecb-a104-cd753cebbca5)
-    (property "Reference" "R5" (at 79 96.72 0)
+    (property "Reference" "R?" (at 79 96.72 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10K" (at 79 99.26 0)
@@ -905,16 +995,16 @@
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "R5") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "R19") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "R27") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "R35") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
@@ -925,10 +1015,49 @@
     )
   )
 
+  (symbol (lib_id "power:GND") (at 102 71 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 07d0cc2f-afa8-4b5c-aad9-86796ebb90bf)
+    (property "Reference" "#PWR?" (at 102 77.35 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 102 75.98 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 102 71 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 102 71 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid a4bb1300-a477-497c-bef8-48a4d2da049b))
+    (instances
+      (project "RosMechatronicBoard"
+        (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
+          (reference "#PWR?") (unit 1)
+        )
+        (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
+          (reference "#PWR?") (unit 1)
+        )
+        (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
+          (reference "#PWR?") (unit 1)
+        )
+        (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
+          (reference "#PWR?") (unit 1)
+        )
+      )
+      (project "DRV8874_breakout_board"
+        (path "/a9814894-6caf-47c3-94af-538221f5e47e"
+          (reference "#PWR0108") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:GND") (at 213 124 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 11803a82-558b-4809-babf-7082337fc8ba)
-    (property "Reference" "#PWR04" (at 213 130.35 0)
+    (property "Reference" "#PWR?" (at 213 130.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 213 128.98 0)
@@ -944,21 +1073,21 @@
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "#PWR038") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "#PWR056") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
         (path "/a9814894-6caf-47c3-94af-538221f5e47e"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR0113") (unit 1)
         )
       )
     )
@@ -967,7 +1096,7 @@
   (symbol (lib_id "Herranz - Resistors (0402):10K") (at 90 120 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1b5a682e-5d96-4b66-9206-afc3d410dc0c)
-    (property "Reference" "R6" (at 90 112.72 0)
+    (property "Reference" "R?" (at 90 112.72 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10K" (at 90 115.26 0)
@@ -987,21 +1116,21 @@
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "R6") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "R20") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "R28") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "R36") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
         (path "/a9814894-6caf-47c3-94af-538221f5e47e"
-          (reference "R4") (unit 1)
+          (reference "R5") (unit 1)
         )
       )
     )
@@ -1010,7 +1139,7 @@
   (symbol (lib_id "power:GND") (at 107 95 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1caba57a-49a5-4b9e-904f-21364e81ff5b)
-    (property "Reference" "#PWR03" (at 107 101.35 0)
+    (property "Reference" "#PWR?" (at 107 101.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 107 99.98 0)
@@ -1026,21 +1155,21 @@
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "#PWR03") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "#PWR018") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "#PWR039") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "#PWR057") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
         (path "/a9814894-6caf-47c3-94af-538221f5e47e"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR0111") (unit 1)
         )
       )
     )
@@ -1049,7 +1178,7 @@
   (symbol (lib_id "power:+3.3V") (at 84 118 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2acec15a-72eb-4574-94cd-23490e9e3450)
-    (property "Reference" "#PWR0105" (at 84 121.81 0)
+    (property "Reference" "#PWR?" (at 84 121.81 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 84 112.34 0)
@@ -1065,21 +1194,21 @@
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "#PWR0105") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "#PWR012") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "#PWR035") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "#PWR053") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
         (path "/a9814894-6caf-47c3-94af-538221f5e47e"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR0101") (unit 1)
         )
       )
     )
@@ -1088,7 +1217,7 @@
   (symbol (lib_id "power:GND") (at 113 145 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 33546bb4-5076-4e09-8a1d-18d8e0559d2d)
-    (property "Reference" "#PWR0101" (at 113 151.35 0)
+    (property "Reference" "#PWR?" (at 113 151.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 113 149.98 0)
@@ -1104,60 +1233,60 @@
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "#PWR0101") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "#PWR033") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "#PWR051") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
         (path "/a9814894-6caf-47c3-94af-538221f5e47e"
-          (reference "#PWR017") (unit 1)
+          (reference "#PWR0102") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:+3.3V") (at 123 55 0) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 102 46 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3f90d248-3423-4bdf-9f92-e46eba233f8a)
-    (property "Reference" "#PWR0102" (at 123 58.81 0)
+    (property "Reference" "#PWR?" (at 102 49.81 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3.3V" (at 123 49.91 0)
+    (property "Value" "+3.3V" (at 102 40.91 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 123 55 0)
+    (property "Footprint" "" (at 102 46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 123 55 0)
+    (property "Datasheet" "" (at 102 46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 0680d313-b3d3-41c4-becd-a37963f551de))
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "#PWR0102") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "#PWR019") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "#PWR040") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "#PWR058") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
         (path "/a9814894-6caf-47c3-94af-538221f5e47e"
-          (reference "#PWR09") (unit 1)
+          (reference "#PWR0107") (unit 1)
         )
       )
     )
@@ -1197,7 +1326,7 @@
   (symbol (lib_id "power:GND") (at 167 139 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4f9d3f23-6f5a-45b1-9a70-051453f42f0d)
-    (property "Reference" "#PWR0108" (at 167 145.35 0)
+    (property "Reference" "#PWR?" (at 167 145.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 167 143.98 0)
@@ -1213,21 +1342,21 @@
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "#PWR0108") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "#PWR023") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "#PWR043") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "#PWR061") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
         (path "/a9814894-6caf-47c3-94af-538221f5e47e"
-          (reference "#PWR012") (unit 1)
+          (reference "#PWR0112") (unit 1)
         )
       )
     )
@@ -1236,7 +1365,7 @@
   (symbol (lib_id "Herranz - Resistors (0402):0") (at 44 97 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4fbdb442-1e64-4c35-a1c4-f6380e32413f)
-    (property "Reference" "R4" (at 47.91 94.46 90)
+    (property "Reference" "R?" (at 47.91 94.46 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "0" (at 47.91 97 90)
@@ -1256,16 +1385,16 @@
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "R4") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "R18") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "R26") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "R34") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
@@ -1279,7 +1408,7 @@
   (symbol (lib_id "power:GND") (at 45 102 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 581b9a07-aa44-4143-9f7a-94b955a2f0d9)
-    (property "Reference" "#PWR0101" (at 45 108.35 0)
+    (property "Reference" "#PWR?" (at 45 108.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 45 106.98 0)
@@ -1295,21 +1424,21 @@
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "#PWR0101") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "#PWR033") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "#PWR051") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
         (path "/a9814894-6caf-47c3-94af-538221f5e47e"
-          (reference "#PWR02") (unit 1)
+          (reference "#PWR0117") (unit 1)
         )
       )
     )
@@ -1318,7 +1447,7 @@
   (symbol (lib_id "Herranz - PowerIC:DRV8874PWPR") (at 144 114 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 64e78095-8630-4372-91d3-331ba27c4f62)
-    (property "Reference" "U2" (at 144.5 75.1 0)
+    (property "Reference" "U?" (at 144.5 75.1 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "DRV8874PWPR" (at 144.5 77.64 0)
@@ -1358,16 +1487,16 @@
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "U2") (unit 1)
+          (reference "U?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "U6") (unit 1)
+          (reference "U?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "U9") (unit 1)
+          (reference "U?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "U12") (unit 1)
+          (reference "U?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
@@ -1381,7 +1510,7 @@
   (symbol (lib_id "power:+3.3V") (at 213 92 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 693e1bac-f10d-4236-a033-6cf81edeafe2)
-    (property "Reference" "#PWR0102" (at 213 95.81 0)
+    (property "Reference" "#PWR?" (at 213 95.81 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 213 86.91 0)
@@ -1397,60 +1526,21 @@
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "#PWR0102") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "#PWR019") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "#PWR040") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "#PWR058") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
         (path "/a9814894-6caf-47c3-94af-538221f5e47e"
-          (reference "#PWR013") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 126 69 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 7698a03c-6beb-4d7e-bc31-e5036ddab1a7)
-    (property "Reference" "#PWR06" (at 126 75.35 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 126 73.98 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 126 69 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 126 69 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid b0c1f240-07f3-4ff2-9c74-49b432c8f6b3))
-    (instances
-      (project "RosMechatronicBoard"
-        (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "#PWR06") (unit 1)
-        )
-        (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "#PWR020") (unit 1)
-        )
-        (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "#PWR041") (unit 1)
-        )
-        (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "#PWR059") (unit 1)
-        )
-      )
-      (project "DRV8874_breakout_board"
-        (path "/a9814894-6caf-47c3-94af-538221f5e47e"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR0114") (unit 1)
         )
       )
     )
@@ -1459,7 +1549,7 @@
   (symbol (lib_id "power:+3.3V") (at 45 76 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7fdc1b43-e71a-4c8b-a91a-1f0952f4c40a)
-    (property "Reference" "#PWR0107" (at 45 79.81 0)
+    (property "Reference" "#PWR?" (at 45 79.81 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 45 70.34 0)
@@ -1475,64 +1565,21 @@
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "#PWR0107") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "#PWR032") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "#PWR050") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
         (path "/a9814894-6caf-47c3-94af-538221f5e47e"
-          (reference "#PWR01") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Herranz - Capacitor (0603):Gen_C") (at 138 59 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 80dda264-58c9-4aef-9045-cc1259758ba6)
-    (property "Reference" "C5" (at 141.11 62.46 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "100nF" (at 141.11 65 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 138 56 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 138 59 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Voltage" "16v" (at 141.11 67.54 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (pin "1" (uuid 182c7fc7-4ca6-4b97-9872-df7eeba2518c))
-    (pin "2" (uuid 3d5bb33a-f185-4393-8288-2ae8b1954246))
-    (instances
-      (project "RosMechatronicBoard"
-        (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "C5") (unit 1)
-        )
-        (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "C14") (unit 1)
-        )
-        (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "C20") (unit 1)
-        )
-        (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "C26") (unit 1)
-        )
-      )
-      (project "DRV8874_breakout_board"
-        (path "/a9814894-6caf-47c3-94af-538221f5e47e"
-          (reference "C5") (unit 1)
+          (reference "#PWR0116") (unit 1)
         )
       )
     )
@@ -1541,7 +1588,7 @@
   (symbol (lib_id "power:GND") (at 84 142 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 88f311e6-436c-48b1-a4c0-f4e6c3a11744)
-    (property "Reference" "#PWR0104" (at 84 148.35 0)
+    (property "Reference" "#PWR?" (at 84 148.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 84 146.98 0)
@@ -1557,21 +1604,21 @@
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "#PWR0104") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "#PWR036") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "#PWR054") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
         (path "/a9814894-6caf-47c3-94af-538221f5e47e"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR0103") (unit 1)
         )
       )
     )
@@ -1580,7 +1627,7 @@
   (symbol (lib_id "Herranz - Capacitor (0603):Gen_C") (at 95 85 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a4ddcd35-4654-4c9e-9bc0-1eae5755919f)
-    (property "Reference" "C1" (at 98.11 88.46 0)
+    (property "Reference" "C?" (at 98.11 88.46 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 98.11 91 0)
@@ -1600,16 +1647,16 @@
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "C1") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "C10") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "C16") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "C22") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
@@ -1620,40 +1667,40 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 138 69 0) (unit 1)
+  (symbol (lib_id "power:GND") (at 112 71 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a6254869-60f9-489c-bab0-63c6b5b16ca8)
-    (property "Reference" "#PWR07" (at 138 75.35 0)
+    (property "Reference" "#PWR?" (at 112 77.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 138 73.98 0)
+    (property "Value" "GND" (at 112 75.98 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 138 69 0)
+    (property "Footprint" "" (at 112 71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 138 69 0)
+    (property "Datasheet" "" (at 112 71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 2d90fb63-2293-47fe-95b4-e8b66f1dc736))
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "#PWR022") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "#PWR042") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "#PWR060") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
         (path "/a9814894-6caf-47c3-94af-538221f5e47e"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR0109") (unit 1)
         )
       )
     )
@@ -1662,7 +1709,7 @@
   (symbol (lib_id "power:+3.3V") (at 74 99 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ae649887-5e2e-40b0-95f6-313e3b93fd98)
-    (property "Reference" "#PWR0106" (at 74 102.81 0)
+    (property "Reference" "#PWR?" (at 74 102.81 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 74 93.34 0)
@@ -1678,21 +1725,21 @@
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "#PWR0106") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "#PWR034") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "#PWR052") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
         (path "/a9814894-6caf-47c3-94af-538221f5e47e"
-          (reference "#PWR03") (unit 1)
+          (reference "#PWR0115") (unit 1)
         )
       )
     )
@@ -1701,7 +1748,7 @@
   (symbol (lib_id "Herranz - Capacitor (0603):Gen_C") (at 173 120 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid af3e243b-c82d-4979-973c-177dacf0e1ee)
-    (property "Reference" "C6" (at 176.53 123.46 0)
+    (property "Reference" "C?" (at 176.53 123.46 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22nF" (at 176.53 126 0)
@@ -1721,21 +1768,50 @@
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "C6") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "C15") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "C21") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "C27") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
         (path "/a9814894-6caf-47c3-94af-538221f5e47e"
-          (reference "C6") (unit 1)
+          (reference "C5") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Herranz - Resistors (0402):0") (at 101 66 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid b0cbfddd-d697-4dff-90d6-1c025ab6e67b)
+    (property "Reference" "R7" (at 104.14 63.46 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "0" (at 104.14 66 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 98 66 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 101 66 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Size" "0402" (at 104.14 68.54 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (pin "2" (uuid a71cead4-e151-48f5-a57e-c478c4473356))
+    (pin "1" (uuid 304ef29e-08d3-44de-a34e-aeabfeb20ede))
+    (instances
+      (project "DRV8874_breakout_board"
+        (path "/a9814894-6caf-47c3-94af-538221f5e47e"
+          (reference "R7") (unit 1)
         )
       )
     )
@@ -1765,53 +1841,10 @@
     )
   )
 
-  (symbol (lib_id "Herranz - Capacitor (0603):Gen_C") (at 126 59 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid babe46c9-502b-469c-a7de-c971beaa925a)
-    (property "Reference" "C4" (at 129.11 62.46 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "100nF" (at 129.11 65 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 126 56 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 126 59 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Voltage" "16v" (at 129.11 67.54 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (pin "1" (uuid 3f44b5db-ed49-44ff-bb3f-b6d2803a44c4))
-    (pin "2" (uuid dc51fad2-2f2f-40ac-b207-4b7ee46a9392))
-    (instances
-      (project "RosMechatronicBoard"
-        (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "C4") (unit 1)
-        )
-        (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "C13") (unit 1)
-        )
-        (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "C19") (unit 1)
-        )
-        (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "C25") (unit 1)
-        )
-      )
-      (project "DRV8874_breakout_board"
-        (path "/a9814894-6caf-47c3-94af-538221f5e47e"
-          (reference "C4") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Herranz - Capacitor (0603):Gen_C") (at 107 85 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bb32184f-0db4-4942-8103-978a548bf996)
-    (property "Reference" "C2" (at 110.11 88.46 0)
+    (property "Reference" "C?" (at 110.11 88.46 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 110.11 91 0)
@@ -1831,21 +1864,50 @@
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "C2") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "C11") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "C17") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "C23") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
         (path "/a9814894-6caf-47c3-94af-538221f5e47e"
           (reference "C2") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Herranz - Capacitor (0402):Gen_C") (at 112 60 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp yes) (fields_autoplaced)
+    (uuid c690d08c-1db3-4163-9b20-416da03f0429)
+    (property "Reference" "C3" (at 114.97 63.46 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "Gen_C" (at 114.97 66 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 112 57 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 112 60 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Voltage" "Voltage" (at 114.97 68.54 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (pin "2" (uuid 4450ce11-8452-41c3-9efa-b334460067cc))
+    (pin "1" (uuid 5f58faaf-7f6e-48ac-ba20-a6629d9b880d))
+    (instances
+      (project "DRV8874_breakout_board"
+        (path "/a9814894-6caf-47c3-94af-538221f5e47e"
+          (reference "C3") (unit 1)
         )
       )
     )
@@ -1885,7 +1947,7 @@
   (symbol (lib_id "Herranz - Capacitor (0603):Gen_C") (at 120 85 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid dbf3a407-69b4-47b9-82f5-557465ebf2bc)
-    (property "Reference" "C3" (at 123.11 88.46 0)
+    (property "Reference" "C?" (at 123.11 88.46 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 123.11 91 0)
@@ -1905,21 +1967,21 @@
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "C3") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "C12") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "C18") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "C24") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
         (path "/a9814894-6caf-47c3-94af-538221f5e47e"
-          (reference "C3") (unit 1)
+          (reference "C4") (unit 1)
         )
       )
     )
@@ -1928,7 +1990,7 @@
   (symbol (lib_id "Herranz - Resistors (0402):62K") (at 83 134 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e2d65f07-b238-4e7c-bd14-8136a901ff6a)
-    (property "Reference" "R5" (at 86.36 131.46 90)
+    (property "Reference" "R4" (at 86.36 131.46 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "62K" (at 86.36 134 90)
@@ -1948,7 +2010,7 @@
     (instances
       (project "DRV8874_breakout_board"
         (path "/a9814894-6caf-47c3-94af-538221f5e47e"
-          (reference "R5") (unit 1)
+          (reference "R4") (unit 1)
         )
       )
     )
@@ -1957,7 +2019,7 @@
   (symbol (lib_id "power:Vdrive") (at 95 78 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e511474f-bdae-4223-9c12-ac8a7c371d50)
-    (property "Reference" "#PWR0103" (at 89.92 81.81 0)
+    (property "Reference" "#PWR?" (at 89.92 81.81 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "Vdrive" (at 95 72.64 0)
@@ -1973,21 +2035,21 @@
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "#PWR0103") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "#PWR037") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "#PWR055") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
         (path "/a9814894-6caf-47c3-94af-538221f5e47e"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR0110") (unit 1)
         )
       )
     )
@@ -1996,7 +2058,7 @@
   (symbol (lib_id "Herranz - Resistors (0402):0") (at 44 81 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp yes) (fields_autoplaced)
     (uuid ea27d3b8-8acc-4de2-bc05-6aee2339cef2)
-    (property "Reference" "R3" (at 47.91 78.46 90)
+    (property "Reference" "R?" (at 47.91 78.46 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "0" (at 47.91 81 90)
@@ -2016,16 +2078,16 @@
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "R3") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "R17") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "R25") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "R33") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
@@ -2039,7 +2101,7 @@
   (symbol (lib_id "Herranz - Resistors (0402):0") (at 112 140 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ed078cf0-18be-46a3-bdbc-7f74575302d6)
-    (property "Reference" "R4" (at 115.91 137.46 90)
+    (property "Reference" "R?" (at 115.91 137.46 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "0" (at 115.91 140 90)
@@ -2059,21 +2121,21 @@
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "R4") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "R18") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "R26") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "R34") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
         (path "/a9814894-6caf-47c3-94af-538221f5e47e"
-          (reference "R6") (unit 1)
+          (reference "R8") (unit 1)
         )
       )
     )
@@ -2082,7 +2144,7 @@
   (symbol (lib_id "power:GND") (at 95 95 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ef86195e-ff8d-4f2e-8533-a53e11a27930)
-    (property "Reference" "#PWR04" (at 95 101.35 0)
+    (property "Reference" "#PWR?" (at 95 101.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 95 99.98 0)
@@ -2098,21 +2160,21 @@
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "#PWR038") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "#PWR056") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
         (path "/a9814894-6caf-47c3-94af-538221f5e47e"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR0106") (unit 1)
         )
       )
     )
@@ -2121,7 +2183,7 @@
   (symbol (lib_id "power:GND") (at 261 120 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fc896bb6-bb78-4e4a-baff-73cc75cc3970)
-    (property "Reference" "#PWR0108" (at 261 126.35 0)
+    (property "Reference" "#PWR?" (at 261 126.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 261 124.98 0)
@@ -2137,21 +2199,21 @@
     (instances
       (project "RosMechatronicBoard"
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/318900b3-2436-4284-bca8-0ffa65649c89"
-          (reference "#PWR0108") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/8bbf1555-9781-4af3-bbc0-fdce319f9e3c"
-          (reference "#PWR023") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/14e70d62-43dc-4725-9c42-40568e45ff10"
-          (reference "#PWR043") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/25a480f9-594a-4a75-8741-88ac7e0fd4ad/d70baead-72f9-4a39-a1ce-4bdb0a4cab4d"
-          (reference "#PWR061") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "DRV8874_breakout_board"
         (path "/a9814894-6caf-47c3-94af-538221f5e47e"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR0105") (unit 1)
         )
       )
     )
